@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //Method 1 concat()
+
+//Example 1
+(function () {
+   let a = 'Hello';
+   let b = ' World';
+   let c = '!!';
+   console.log(a.concat( b , c ));
+})();
+
+//Example 2
+(function () {
+   let even = [2,4,6,8];
+   let odd = [1,3,5,7,9];
+   let naturalNumber = even.concat( odd ).sort();
+   console.log( naturalNumber );
+})();
+
+//Method 2 every()
+
+//Example 1
+(function () {
+   let condition = (num) => num < 10
+   let num = [1,3,5,8,9];
+   console.log(num.every(condition));
+})();
+
+//Example 2
+(function () {
+   let condition = (num) => num < 10
+   let num = [1,3,11,8,9];
+   console.log(num.every(condition));
+})();
+
+//Method 3 filter()
+
+//Example 1
+(function () {
+   let condition = (num) => num > 10
+   let num = [1,10,33,5,4,89,100];
+   let array = num.filter(condition);
+   console.log(array);
+})();
+
+//Example 2
+(function () {
+   let condition = (num) => num > 50
+   let num = [1,10,33,5,4,70,89,true,"97",100];
+   let array = num.filter(condition);
+   console.log(array);
+})();
+
+//Method 4 forEach()
+
+//Example 1
+var languages = ["JavaScript", "Python", "C++"];
+languages.forEach( function(item, index) {
+  console.log(index + ". " + item);
+} );
+
+//Example 2
+var languages = ["JavaScript", "Python", "C++"];
+languages.forEach( function (item, index) {
+  console.log(index + ". " + item + " is a Programming Language.");
+} );
+
+//Method 5 indexOf()
+
+//Example 1
+var text = "The quick brown fox jumps over the lazy dog";
+console.log(text.indexOf("o"));
+console.log(text.indexOf(2));
+
+//Example 2
+var num = [1,2,3,4,5,6,7,8,9];
+console.log(num.indexOf("2"));
+console.log(num.indexOf(2));
+console.log(num.indexOf(12));
+
+//Method 6 lastIndexOf()
+
+//Example 1
+var text = "The quick brown fox jumps over the lazy dog";
+console.log(text.lastIndexOf("o"));
+
+//Example 2
+var num = [1,2,3,4,5,6,7,8,7,9];
+console.log(num.indexOf(7));
+
+//Method 7 join()
+
+//Example 1 
+var junkFood = ['pizza' , 'burger' , 'fries' , 'pasta']
+console.log(junkFood.join(","));
+console.log(junkFood.join());
+console.log(junkFood.join("-"));
+
+//Example 2
+var text = ['The','quick','brown','fox','jumps','over','the','lazy','dog']
+console.log(text.join(""));
+console.log(text.join(" ")); 
+console.log(text.join("."));
+
+//Method 8 map()
+
+//Example 1
+var num = [2,4,6,8];
+console.log(num.map((ans) => Math.cbrt(ans)));
+
+//Example 2
+var num = [1,3,5,7];
+console.log(num.map((ans) => ans * 50));
+
+//Method 9 pop()
+
+//Example 1
+(function () {
+   var num = [1,2,3,4,5];
+   var pop = num.pop();
+   console.log(pop);
+   console.log(num);
+})();
+
+//Example 2
+(function () {
+   var num = [1,2,3,4,5];
+   console.log(num.pop());
+})();
+
+//Method 10 push()
+
+//Example 1
+(function () {
+   var fruits = ['apples','bananas','cherry'];
+   var push = fruits.push('dragon friuts');
+   console.log(fruits);
+})();
+
+//Example 2
+(function () {
+   var veges = ['cucombers','tomatos','peas'];
+   var push = veges.push('potatos','egg plants');
+   console.log(veges);
+})();
+
+//Method 11 reduce()
+
+//Example 1
+(function (){
+    var arr = [1,3,5,7,9];
+    var condition = (a,b) => a+b
+    console.log (arr.reduce(condition));
+})();
+
+//Example 2
+(function (){
+    var arr = [1,3,5,7,9];
+    var condition = (a,b) => a-b
+    console.log (arr.reduce(condition));
+})();
+
+//Method 12 reduceRight()
+
+//Example 1
+(function (){
+    var arr = [2,4,6,8];
+    var condition = (a,b) => a+b
+    console.log (arr.reduceRight(condition));
+})();
+
+//Example 2
+(function (){
+    var arr = [2,4,6,8];
+    var condition = (a,b) => a-b
+    console.log (arr.reduceRight (condition));
+})();
+
+//Method 13 reverse()
+
+//Example 1
+(function (){
+    let string = ['one','two','three'];
+    console.log (string.reverse());
+})();
+
+//Example 2
+(function (){
+    let number = [1,2,3];
+    console.log (number.reverse());
+})();
+
+//Method 14 shift()
+
+//Example 1
+(function (){
+    let num = [10,20,30];
+    console.log (num.shift());
+})();
+
+//Example 2
+(function (){
+    let eat = ['breakfast','lunch','dinner'];
+    console.log (eat.shift());
+})();
+
+//Method 15 slice()
+
+//Example 1
+(function (){
+    let num = [10,20,30];
+    console.log (num.slice(1,2));
+})();
+
+//Example 2
+(function (){
+    let eat = ['breakfast','lunch','dinner'];
+    console.log (eat.slice(0));
+})();
+
+//Method 16 some()
+
+//Example 1
+(function (){
+    let arr = [2,5,8,9];
+    let condition = (arr) => arr % 2 === 0;
+    console.log (arr.some(condition));
+})();
+
+//Example 2
+(function (){
+    let arr = [2,5,8,9];
+    let condition = (arr) => arr % 7 === 0;
+    console.log (arr.some(condition));
+})();
+
+//Method 17 toSource()
+
+//Example 1
+
+
+//Method 18 sort()
+
+//Example 1
+(function (){
+   let num = [2,100,68,53,78,12];
+    console.log (num.sort());
+})();
+
+//Example 2
+(function (){
+    let color = ['yellow','red','blue','black'];
+    console.log(color.sort());
+})();
+
+//Method 19 splice()
+
+//Example 1
+(function (){
+   let fruits = ['apples','bananas','cherry'];
+    console.log (fruits.splice(1,2, 'dragon fruit'));
+})();
+
+//Example 2
+(function (){
+    let veges = ['cucombers','tomatos','peas','potatos','egg plants'];
+    console.log (veges.splice(3));
+})();
+
+//Method 20 toString()
+
+//Example 1
+(function (){
+   let num = 35;
+   console.log (num.toString());
+   console.log (num.toString(2));
+   console.log (num.toString(16));
+})();
+
+//Example 2
+(function (){
+    let color = ['yellow','red','blue','black'];
+    console.log(color.toString());
+})();
+
+//Method 21 unshift()
+
+//Example 1
+(function (){
+   let num = [1,2,3,4,5];
+   console.log (num.unshift(6,7));
+   console.log (num);
+})();
+
+//Example 2
+(function (){
+    let fruits = ['apples','bananas','cherry'];
+    console.log (fruits.unshift('dragon fruit'));
+    console.log (fruits);
+})();
+
+
+
+
+
+</script>
+</html>
